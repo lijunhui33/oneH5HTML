@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=720,user-scalable=no"/>
+		<style type="text/css">
+		  *{
+		  	margin: 0;
+		  	padding: 0;
+		  }
+		  #box{
+		  	width: 720px;
+		  	min-height: 1300px;
+		  	background: url(img/dl.png) no-repeat;
+		  	position: relative;
+		  }
+		  .dl_top{
+		  	width: 720px;
+		  	height: 86px;
+		  }
+		  .dl_top_left{
+		  	width: 80px;
+		  	height: 86px;
+		  	float: left;
+		  	text-align: center;
+		  	line-height: 86px;
+		  	font-size: 30px;
+		  }
+		  .dl_top_left a{
+		  	text-decoration: none;
+		  	color: black;
+		  }
+		  .dl_top_right{
+		  	width: 640px;
+		  	height: 86px;
+		  	float: right;
+		  	letter-spacing: 0.04rem;
+		  	font-size: 30px;
+		  	padding-left: 220px;
+		  	box-sizing: border-box;
+		  	line-height: 86px;
+		  }
+		  .dl_center{
+		  	width: 582px;
+		  	min-height: 280px;
+		  	margin:  106px auto auto auto;
+		  	/*background-color: wheat;*/
+		  }
+		   .dl_center input{
+		  	width: 582px;
+		  	height: 80px;
+		  	border: none;
+		  	outline: none;
+		  	border-radius: 10px;
+		  	text-align: center;
+		  	background-color: rgba(178,185,194,1);
+		  	font-size: 30px;
+		  	color: white;
+		  }
+		  .dl_center input:nth-of-type(1){
+		  	background: url(img/dl_wx.png) no-repeat 20px 0px;
+		  	background-color: rgba(178,185,194,1);
+		  	
+		  }
+		  .dl_center input:nth-of-type(2){
+		  	background: url(img/wb.png) no-repeat 20px 0px;
+		  	background-color: rgba(178,185,194,1);
+		  	margin-top: 20px;
+		  	
+		  }
+		  .dl_center input:nth-of-type(3){
+		  	background: url(img/dl_qq.png) no-repeat 20px 0px;
+		  	background-color: rgba(178,185,194,1);
+		  	
+		  	margin-top: 20px;
+		  	
+		  }
+		  .dl_sj{
+		  	width: 582px;
+		  	height: 85px;
+		  	margin: 20px auto auto auto;
+		  	text-align: center;
+		  	color: white;
+		  	font-size: 30px;
+		  	letter-spacing: 0.04rem;
+		  }
+		  .dl_sj p:nth-of-type(2){
+		  	width: 562px;
+		  	height: 51px;
+		  	display: block;
+		  	background: url(img/sj.png) no-repeat 150px 0px;
+		  	line-height: 58px;
+		  }
+		  .dl_tk{
+		  	width: 582px;
+		  	min-height: 110px;
+		  	margin: 0 auto;
+		  	text-align: center;
+		  	position: absolute;
+		  	left: 80px;
+		  	top: 1000px;
+		  	font-size: 30px;
+		  	
+		  }
+		  .dl_tk a{
+		  	color: white;
+		  }
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="dl_top">
+				<div class="dl_top_left">
+					<a href="index.html">&lang;</a>
+				</div>
+				<div class="dl_top_right">
+					登陆 ONE
+				</div>
+			</div>
+			<div class="dl_center">
+				<input type="" name="" id="" value="微信" />
+				<input type="" name="" id="" value="微博" />
+				<input type="" name="" id="" value="QQ" />
+				
+			</div>
+			<div class="dl_sj">
+				<p>或者</p>
+				<p>使用手机登陆</p>
+			</div>
+			<div class="dl_tk">
+				<a href="">创建账户即代表你同意<br />
+				使用条款及隐私条款</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+          var sj=document.getElementsByClassName("dl_sj")[0];
+          sjdl1=sj.getElementsByTagName("p")[1];
+          sjdl1.onclick=function(){
+          	location.href="sjdl.html"
+          }
+	</script>
+</html>

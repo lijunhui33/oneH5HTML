@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=720,user-scalable=no"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+   		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	     <script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	     <link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<script type="text/javascript" src="js/swiper.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<div class="box1">
+				<div class="all_one">
+					<div class="all_one_pic">
+						<img :src="allone.pic"/>
+					</div>
+					<div class="all_one_picadmin">
+						{{allone.admin}}
+					</div>
+					<div class="all_one_js">
+						{{allone.js}}
+					</div>
+					<div class="all_one_subject">
+						{{allone.sebject}}
+					</div>
+					<div class="all_one_bot">
+						小记
+					</div>
+				</div>
+				<div class="top11">
+					
+				</div>
+				
+				<div class="all_one_vol">
+					<div class="all_one_vol_center">
+						一个VOL.1868 <img src="img/vol.png"/>
+					</div>
+				</div>
+				<div class="all_one_vol_cont">
+					<li v-for="i in vol">
+						<div class="all_one_vol_cont_left">
+							
+						</div>
+						<div class="all_one_vol_cont_right">
+							<span>{{i.volone}}</span>
+							<span>{{i.voltwo}}</span>
+						</div>
+					</li>
+				</div>
+				<div class="top11">
+					
+				</div>
+				<div class="top98">
+					
+				</div>
+				<div class="all_top">
+					<span></span>
+					<span>/</span>
+					<span></span>
+					<span>/</span>
+					<span></span>
+				</div>
+				<div class="all_wd" id="weather">
+					位置：广州
+				</div>
+			</div>
+			<div class="box2">
+				<div class="home">
+					<div class="home_logo">
+						<div class="home_logo_select">
+							<button type="button" class="home-setup">
+					          <span class="glyphicon glyphicon-search home-setup-tu"></span>
+					        </button>
+						</div>
+						
+					</div>
+					<div class="home_Carousel">
+							<!--<div id="index">
+								<ul class="imgUl">
+									<li><img src="img/myul1.png"/></li>
+									<li><img src="img/myul2.png"/></li>
+									<li><img src="img/myul3.png"/></li>
+								</ul>
+								<ul class="pointUl">
+									<li class="active"></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>--><!--原生js-->
+							<div class="swiper-container">
+							    <div class="swiper-wrapper">
+							        <div class="swiper-slide "></div>
+							        <div class="swiper-slide"></div>
+							        <div class="swiper-slide"></div>
+							    </div>
+							    <!-- 如果需要分页器 -->
+							    <div class="swiper-pagination"></div>
+							</div>
+					</div>
+					<div class="top17">
+						
+					</div>
+					<div class="home_Navigation">
+						<div class="home_Navigation_top">
+							分类导航
+						</div>
+						<div class="home_Navigation_bot">
+							<div class="home_Navigation_bot_left">
+								<li><img src="img/dh1.jpg"/></li>
+								<li><img src="img/dh2.jpg"/></li>
+								<li><img src="img/dh3.jpg"/></li>
+								<li><img src="img/dh4.jpg"/></li>
+							</div>
+							<div class="home_Navigation_bot_right">
+								<li><img src="img/dh5.jpg"/></li>
+								<li><img src="img/dh6.jpg"/></li>
+								<li><img src="img/dh7.jpg"/></li>
+							</div>
+						</div>
+					</div>
+					<div class="top17">
+						
+					</div>
+					<div class="home_content">
+						<ul>
+							<li v-for="i in con">
+								<div class="home_content_pic">
+									<img :src="i.imgs"/>
+								</div>
+								<div class="home_content_js">
+									{{i.js}}
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="top17"></div>
+				<!--作家部分-->
+				
+				<div class="home_admin">
+					<div class="home_admin_hot_logo">
+						近期热门作者
+					</div>
+					<div class="home_admin_add" v-for="i in con2">
+						<div class="home_admin_add_left">
+							<div class="home_admin_add_left_head">
+								<img :src="i.imgs"/>
+							</div>
+							<div class="home_admin_add_left_js">
+								<li>{{i.js}}</li>
+								<li>{{i.js2}}</li>
+							</div>
+						</div>
+						<div class="home_admin_add_right">
+							<button>关注</button>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<!--作家部分-->
+				<div class="top17">
+					
+				</div>
+				<div class="top98"></div>
+			</div>
+			<div class="box3">
+				<div class="me_add">
+			        <!--矢量图标-->
+			        <div class="me_add_top">
+			        	<div class="me_add_top_left">
+			        		<button type="button" class="me-setup">
+					          <span class="glyphicon glyphicon-cog me-setup-tu"></span>
+					        </button>
+			        	</div>
+			        	<div class="me_add_top_right">
+			        		<button type="button" class="me-setup">
+					          <span class="glyphicon glyphicon-envelope me-setup-tu"></span>
+					        </button>
+			        	</div>
+			        </div>
+			        <!--矢量图标-->
+			        <!--头像区域-->
+			        <div class="me_add_admin">
+			        	<div class="me_add_admin_top">
+			        		<div class="me_add_admin_top_tou"></div>
+			        		<div class="me_add_admin_top_dl">
+			        			<a href="dd.html">点击登陆</a>
+			        		</div>
+			        	</div>
+			        	<div class="me_add_admin_bottom">
+			        		<img :src="img1"/>
+			        	</div>
+			        </div>
+			        <!--头像区域-->
+			        <!---->
+			        <div class="top17"> </div>
+			        <!---->
+			        <!--收藏-->
+			        <div class="me_collection">
+			        	<div class="me_collection_top">
+			        		我的收藏
+			        	</div>
+			        	<div class="me_collection_bottom">
+			        		<ul>
+			        			<li>
+			        					图文
+			        			</li>
+			        			<li>
+			        					文章
+			        			</li>
+			        			<li>
+			        					音乐
+			        			</li>
+			        			<li>
+			        					影视
+			        			</li>
+			        			<li>
+			        					电台
+			        			</li>
+			        		</ul>
+			        	</div>
+			        </div>
+			       
+			        <!--收藏-->
+			        <div class="top17">
+			        	
+			        </div>
+			        <!---->
+			        <div class="me_like">
+			        	我的关注
+			        </div>
+			        <!---->
+			         <div class="top17">
+			        	
+			        </div>
+			        <!---->
+			        <div class="me_music">
+			        	歌单
+			        </div>
+			        <div class="top17">
+			        	
+			        </div>
+			        <div class="top98"></div>
+				</div>
+			</div>
+		</div>
+		<div id="tab">
+			<div id="tab1">
+				
+			</div>
+			<div id="tab2">
+				
+			</div>
+			<div id="tab3">
+				
+			</div>
+		</div>
+		<!--<div class="content">
+			
+		</div>-->
+	</body>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+       
+		var vue1=new Vue({
+			el:'#box',
+			data:{
+				img1:'img/me1.jpg',
+				con:[
+				   {imgs:'img/cont11.jpg',js:'冬天之前，再谈一次恋爱'},
+				   {imgs:'img/cont2.jpg',js:'总有那么一段旅途，像是你平淡不惊生命里的流星雨'},
+				   {imgs:'img/cont3.png',js:'我对你的最后的爱，是一句“再见”'}
+				],
+				con2:[
+				    {imgs:'img/admin1.png',js:'张晓晗',js2:'作家、编剧、银河少先大队长...'},
+				    {imgs:'img/admin2.png',js:'张晓晗',js2:'作家、编剧、银河少先大队长...'},
+				    
+				],
+				allone:{
+				   pic:'img/all1.jpg',
+				   admin:'插画 | 一园',
+				   js:'我上美术学院，因为舍不得用颜料，所以就用一点点，你知道后来怎么样了吗?中途她凝固掉了，都没用一半就扔了。颜料和心都一样，不要省着，那样会凝固掉了',
+				   sebject:'《浩九的爱情》'
+				},
+				vol:[
+				   {volone:'周云蓬月记',voltwo:'天空之城再哭泣'},
+				   {volone:'ONE STORY',voltwo:'公益杀手'},
+				   {volone:'连载',voltwo:'二分之一的爱人·Chapter'},
+				   {volone:'问答',voltwo:'凭什么要求世界善待混吃等死的你'},
+				   {volone:'音乐',voltwo:'今晚月色很美，我想寄一盒给你'},
+				   {volone:'电台',voltwo:'陪伴你的文艺生活，今晚22:30开播'},
+				   
+				]
+			},
+			methods:{
+				dj(){
+				
+				}
+			}
+		});
+		tab();
+		lb();
+		time();
+		vol();
+		tq();
+	</script>
+</html>
